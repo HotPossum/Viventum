@@ -1,0 +1,108 @@
+﻿@model Viventum.Models.ContactModel
+
+<section class="kontakt">
+    <div class="container">
+        <div class="kontakt__wrapper">
+            <div class="title" id="scene4">
+                <h2 data-depth="0">Kontakt</h2>
+                <span data-depth="0.1">Kontakt</span>
+            </div>
+            <div class="kontakt__wrapper-adress">
+                <div class="wrapper">
+                    <div class="icon">
+                        <img src="~/img/cell-phone.svg" alt="">
+                    </div>
+                    <div>
+                        <h6>telefon</h6>
+                        <p><a href="tel:+49 179 9496976">+49 179 9496976</a></p>
+                        <p><a href="tel:+49 381 87399041">+49 381 87399041</a></p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="icon">
+                        <img src="~/img/clock.svg" alt="">
+                    </div>
+                    <div>
+                        <h6>hours</h6>
+                        <p>09:00 – 18:00 Uhr<br> Mo. – Fr. </p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="icon">
+                        <img src="~/img/marker.svg" alt="">
+                    </div>
+                    <div>
+                        <h6>adresse</h6>
+                        <p>
+                            Schwaansche Str. 1<br>
+                            18055 Rostock
+                        </p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="icon">
+                        <img src="~/img/mail.svg" alt="">
+                    </div>
+                    <div>
+                        <h6>e-mail</h6>
+                        <p><a href="mailto:info@viventum.net">info@viventum.net</a></p>
+                    </div>
+                </div>
+                <img src="~/img/contacts-6s.gif" alt="contacts">
+            </div>
+            <div class="kontakt__wrapper-form">
+                <div class="kontakt__adress"></div>
+                <div class="kontakt__form">
+                    <p>
+                        Wir freuen uns auf Ihre Nachricht.
+                        Füllen Sie das Kontaktformular aus und teilen Sie uns Ihr Anliegen mit.
+                        Wir setzen uns umgehend mit Ihnen in Verbindung.
+                    </p>
+                    <form data-ajax="true"
+                          data-ajax-method="POST"
+                          data-ajax-mode="replace"
+                          data-ajax-complete="complete"
+                          asp-action="ContactForm" asp-controller="Home" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <label asp-for="Name">
+                            <p><span>*</span>Name</p>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </label>
+                        <label asp-for="Company">
+                            <p>Firma</p>
+                            <input asp-for="Company" class="form-control" />
+                            <span asp-validation-for="Company" class="text-danger"></span>
+                        </label>
+                        <label asp-for="Email">
+                            <p><span>*</span>E-Mail</p>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </label>
+                        <label asp-for="Subject">
+                            <p>Betreff</p>
+                            <input asp-for="Subject" class="form-control" />
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </label>
+                        <label asp-for="Message">
+                            <p><span>*</span>Ihre Nachricht</p>
+                            <textarea asp-for="Message" cols="30" rows="10"></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </label>
+                        <button type="submit"><span>Nachricht senden</span></button>
+                    </form>
+                    <div id="result" style="display: none; margin-top: 20px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function complete(response) {
+
+        $('#result')
+            .html(response.responseText)
+            .show()
+    }
+</script>

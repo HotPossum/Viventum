@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Viventum</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.min.css">
+    <link rel="stylesheet" href="~/css/menu.css">
+</head>
+<body>
+    <a id="start"></a>
+    <header>
+        <div class="inner-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-10 col-md-3 col-lg-5">
+                        <div class="logo">
+                            <a href="#"><img src="img/logo.svg" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-2 d-sm-block d-md-none">
+                        <div class="colapse-menu-button">
+                            <button class="c-hamburger c-hamburger--htx">
+                                <span>toggle menu</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9 col-lg-7 d-none d-md-block">
+                        <ul class="nav">
+                            <li style="display:none;"><a href="#start">Start</a></li>
+                            <li><a href="#start">Leistungen</a></li>
+                            <li><a href="#software">Software</a></li>
+                            <li><a href="#design">Design</a></li>
+                            <li><a href="#referenzen">Referenzen</a></li>
+                            <li><a href="#contacts">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul class="nav">
+                <li style="display:none;"><a href="#start">Start</a></li>
+                <li><a href="#start">Leistungen</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#referenzen">Referenzen</a></li>
+                <li><a href="#contacts">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-md-3">
+                    <div class="contacts">
+                        <h6>Kontakt</h6>
+                        <p>
+                            VIVENTUM GbR<br>
+                            Software Development
+                        </p>
+                        <p>
+                            Schwaansche Str. 1<br>
+                            18055 Rostock
+                        </p>
+                        <p>Telefon: <a href="tel:+49 179 9496976">+49 179 9496976</a></p>
+                        <p><a href="mailto:">info@viventum.eu</a></p>
+                    </div>
+                </div>
+                <div class="col-5 col-md-2">
+                    <div class="allgemein">
+                        <h6>Allgemein</h6>
+                        <ul>
+                            <li><a href="#">Start</a></li>
+                            <li><a href="#">Software</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Über uns</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="dienstleistungen">
+                        <h6>Dienstleistungen</h6>
+                        <ul>
+                            <li><a href="#">Softwareentwicklung</a></li>
+                            <li><a href="#">Corporate Design</a></li>
+                            <li><a href="#">Technische Dokumentation</a></li>
+                            <li><a href="#">IT-Consulting</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="social">
+                        <h6>Folgen</h6>
+                        <ul>
+                            <li><a href="#"><img src="img/facebook.svg" alt=""></a></li>
+                            <li><a href="#"><img src="img/xing.svg" alt=""></a></li>
+                            <li><a href="#"><img src="img/linkedIn.svg" alt=""></a></li>
+                            <li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <a href="#" class="logo"><img src="img/logo-short.svg" alt="logo"></a>
+                <span class="copy">Copyright © 2020 VIVENTUM</span>
+                <ul>
+                    <li><a href="#">Datenschutzerklärung</a></li>
+                    <li><a href="#">AGB</a></li>
+                    <li><a href="#">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="go-top">
+        <a href="#"><img src="img/up_arrow.svg" alt="arrow"></a>
+    </div>
+
+    <div id="cookie" class="my-cookie">
+        <a href="#" class="close">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9" stroke="#BAC1D1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 1L1 9" stroke="#BAC1D1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+        <div class="my-cookie__title">
+            <h3>Willkommen auf Viventum.eu!</h3>
+            <ul class="desktop-cookie">
+                <li><span>Durch das Weitersurfen auf Viventum.eu erklären Sie sich mit der Verwendung von</span></li>
+                <li><span>Cookies einverstanden. Detaillierte Informationen und wie Sie der Verwendung von</span></li>
+                <li><span>Cookies jederzeit widersprechen können, finden Sie in unseren</span></li>
+                <li><span>Datenschutzhinweisen.</span></li>
+                <li></li>
+                <li><a href="#" class="accept">Akzeptieren</a><a href="#" class="refuse">Nicht akzeptieren</a></li>
+            </ul>
+            <ul class="mobile-cookie">
+                <li><span>Durch das Weitersurfen auf Viventum.eu</span></li>
+                <li><span>erklären Sie sich mit der Verwendung von</span></li>
+                <li><span>Cookies einverstanden. Detaillierte</span></li>
+                <li><span>Informationen und wie Sie der Verwendung</span></li>
+                <li><span>von Cookies jederzeit widersprechen</span></li>
+                <li><span>können, finden Sie in unseren</span></li>
+                <li><span>Datenschutzhinweisen.</span></li>
+                <li></li>
+                <li>
+                    <a href="javascript:void(0)" id="cookie-accept" class="accept">Akzeptieren</a>
+                    <a href="#" class="refuse">Nicht akzeptieren</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="overlay-menu"></div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/js.cookie.min.js"></script>
+    <script src="~/js/libs.min.js"></script>
+
+    <script src="~/js/main.js"></script>
+
+    <script>
+        // Typed.js
+        var options = {
+            strings: ['services {^300\n<span># Individualsoftware</span>^1000\n<span># Corporate Design</span>^1000\n<span># Technische Dokumentation</span>^1000\n<span># IT-Consulting</span>^1000\n<span># Software Reengineering</span>^300\n}'],
+            typeSpeed: 40,
+            loop: false,
+            startDelay: 2000,
+        };
+
+        var typed = new Typed('.leistungen-list', options);
+        // Parallax
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+        var scene1 = document.getElementById('scene1');
+        var parallaxInstance = new Parallax(scene1);
+        var scene2 = document.getElementById('scene2');
+        var parallaxInstance = new Parallax(scene2);
+        var scene3 = document.getElementById('scene3');
+        var parallaxInstance = new Parallax(scene3);
+        var scene4 = document.getElementById('scene4');
+        var parallaxInstance = new Parallax(scene4);
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

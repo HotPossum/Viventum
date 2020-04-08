@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viventum", "Viventum\Viventum.csproj", "{48D4CB87-9BB0-4514-9B75-328C05FCD8BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48D4CB87-9BB0-4514-9B75-328C05FCD8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D4CB87-9BB0-4514-9B75-328C05FCD8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D4CB87-9BB0-4514-9B75-328C05FCD8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D4CB87-9BB0-4514-9B75-328C05FCD8BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {472D04E4-4D8C-4F57-9A48-F21BAAA0768F}
+	EndGlobalSection
+EndGlobal
